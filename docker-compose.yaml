@@ -16,7 +16,13 @@ services:
         - SRV=${SRV}
       dockerfile: ci/Dockerfile
     image: ${REG}/ci/${SRV}:${CI}
-    command: bash
+    
+    volumes:
+      - ./app:/app
+    network_mode: host
+    # ports:
+    #   - 4321:4321
+    command: npm run dev --host 0.0.0.0
 
 networks:
   default:
