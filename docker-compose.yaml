@@ -1,0 +1,26 @@
+
+x-environment: &environment
+  DEBUG: 1
+
+x-logging-options: &logging
+  options:
+    max-size: "10m"
+    max-file: "2"
+
+
+services:
+  ci:
+    build:
+      context: .
+      args:
+        - SRV=${SRV}
+      dockerfile: ci/Dockerfile
+    image: ${REG}/ci/${SRV}:${CI}
+    command: bash
+
+networks:
+  default:
+    external: true
+    name: rt_default
+  proxy:
+    external: true
