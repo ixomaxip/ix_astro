@@ -12,16 +12,18 @@
 		"publish": true
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "12.6.12",
+		"@astrojs/cloudflare": "^12.6.8",
 		"@astrojs/mdx": "4.3.12",
 		"@astrojs/rss": "4.0.14",
 		"@astrojs/sitemap": "3.6.0",
-		"astro": "5.16.2",
+		"@iconify-json/mdi": "^1.2.3",
+		"astro": "^5.16.10",
+		"astro-icon": "^1.1.5",
 		"typescript": "5.9.3"
 	},
 	"devDependencies": {
 		"@types/node": "^25.0.8",
-		"wrangler": "^4.59.2"
+		"wrangler": "^4.35.0"
 	},
 	"private": true,
 	"scripts": {
