@@ -20,7 +20,8 @@ services:
       - CLOUDFLARE_API_TOKEN=${CLOUDFLARE_API_TOKEN}
       - CLOUDFLARE_ACCOUNT_ID=${CLOUDFLARE_ACCOUNT_ID}
     volumes:
-      - ./app:/app
+      # - ./app:/app
+      - ./app_theme:/app
     network_mode: host
     # ports:
     #   - 4321:4321
