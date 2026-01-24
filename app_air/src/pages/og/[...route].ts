@@ -8,6 +8,8 @@ const posts = await getPostsByLocale(defaultLanguage)
 // @ts-ignore
 const pages = Object.fromEntries(posts.map(({ id, data }) => [id, { data }]))
 
+export const prerender = false;
+
 export const { getStaticPaths, GET } = OGImageRoute({
   // The name of your dynamic route segment.
   // In this case it’s `route`, because the file is named `[...route].ts`.
