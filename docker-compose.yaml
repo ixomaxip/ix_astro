@@ -21,6 +21,7 @@ services:
       - CLOUDFLARE_ACCOUNT_ID=${CLOUDFLARE_ACCOUNT_ID}
     volumes:
       - ./app_air:/app
+      # - ./app:/app
     network_mode: host
     # ports:
     #   - 4321:4321
