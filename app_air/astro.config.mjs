@@ -9,6 +9,8 @@ import { defineConfig } from "astro/config"
 
 import robotsTxt from "astro-robots-txt"
 
+import cloudflare from "@astrojs/cloudflare"
+
 // https://astro.build/config
 export default defineConfig({
   output: "static",
@@ -17,6 +19,11 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  adapter: cloudflare({
+    platformProxy: {
+      enabled: true,
+    },
+  }),
   integrations: [
     react(),
     sitemap(),
